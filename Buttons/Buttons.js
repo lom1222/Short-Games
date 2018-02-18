@@ -6,6 +6,10 @@ var but = 0;
 var scoreKeep;
 var highest = 0;
 var score = 0;
+var timeLeft = 0;
+var timeBase = 10*1000;
+var timePer = 1*1000;
+var timeLast = Date.now();
 
 init();
 
@@ -13,6 +17,21 @@ function init(){
   getButtons();
   scoreKeep = document.getElementById("score");
   generateNext();
+  load();
+  setInterval(timeCheck,10);
+  timeLeft = timeBase;
+}
+
+function timeCheck(){
+  var timeNow = Date.now();
+  var timeChange = timeNow - timeLast;
+  if(score>0){
+    timeLeft -= timeChange;
+  }
+  timeLast = timeNow;
+  if(timeLeft<0){
+    reset();
+  }
   updateScore();
 }
 
@@ -114,6 +133,7 @@ function reset(){
     button.style.visibility = "hidden";
   }
   score = 0;
+  timeLeft = timeBase;
 }
 
 function button(num){
@@ -121,13 +141,14 @@ function button(num){
     score++;
     if(score>highest){
       highest = score;
+      save();
     }
+    timeLeft += timePer;
   }
   else{
     reset();
   }
   generateNext();
-  updateScore();
 }
 
 function getButtons(){
@@ -138,6 +159,16 @@ function getButtons(){
   }
 }
 
+function save(){
+  localStorage.buttonsGameSave = btoa(JSON.stringify(highest));
+}
+
+function load(){
+  if(localStorage.buttonsGameSave != undefined && localStorage.buttonsGameSave != null){
+    highest = JSON.parse(atob(localStorage.buttonsGameSave));
+  }
+}
+
 function updateScore(){
-  scoreKeep.innerHTML = "Score: "+score+" | Highest Score: "+highest;
+  scoreKeep.innerHTML = "Score: "+score+" | Highest Score: "+highest+" | Time: "+(timeLeft/1000).toFixed(3);
 }
