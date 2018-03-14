@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="basicStyle.css">
+  </head>
+  <body>
+    <h1>Does <span id="gender">he</span> love you? : <span id="love">maybe</span></h1>
+    <form action="">
+      They are? : <br>
+      <input type="radio" name="gender" value="he" onclick="setGender('he')" checked> boy
+      <input type="radio" name="gender" value="she" onclick="setGender('she')"> girl
+      <input type="radio" name="gender" value="giraffe" onclick="setGender('giraffe')"> giraffe<br>
+      Do you love them? : <br>
+      <input type="radio" name="love" value="maybe" onclick="setLove('maybe')" checked> not sure
+      <input type="radio" name="love" value="yes" onclick="setLove('yes')"> yes
+      <input type="radio" name="love" value="no" onclick="setLove('no')"> no<br>
+    </form>
+  </body>
+  <script src="loveTest.js"></script>
+</html>
