@@ -1,0 +1,15 @@
+html{
+  color: white;
+  display: block;
+  text-align: center;
+  background-color: black;
+  margin:auto;
+  padding:auto;
+}
+
+h1{
+  font-size: 100px;
+  z-index: -1;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
