@@ -1,0 +1,9 @@
+html{
+  background-color: black;
+  color: white;
+  display: inline-block;
+  text-align: center;
+}
+canvas{
+  /*border: 2px solid blue;*/
+}
