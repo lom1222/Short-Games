@@ -212,11 +212,11 @@ var affixes = {
       createAffix("talent","randomOccultistTalent",2,3),
       createAffix("basic","mana",125,150),
       createAffix("basic","manaPercent",9,11),
-      createAffix("lesserHealing","baseHealing",85,85),
+      createAffix("lesserHeal","baseHealing",85,85),
       createAffix("renew","baseHealing",27,27),
       createAffix("dispel","additionalStatusRemove",1,1),
       createAffix("radiantHeal","baseHealing",95,95),
-      createAffix("flashHealing","baseHealing",75,75),
+      createAffix("flashHeal","baseHealing",75,75),
       createAffix("rejuvenate","cooldownRed",70,70),
       createAffix("talentExchange","priestToOccultist",1,1),
       createAffix("talentExchange","occultistToDruid",1,1),
@@ -241,11 +241,11 @@ var affixes = {
       createAffix("talent","randomOccultistTalent",3,3),
       createAffix("basic","mana",150,175),
       createAffix("basic","manaPercent",11,13),
-      createAffix("lesserHealing","baseHealing",130,130),
+      createAffix("lesserHeal","baseHealing",130,130),
       createAffix("renew","baseHealing",40,40),
       createAffix("dispel","additionalStatusRemove",2,2),
       createAffix("radiantHeal","baseHealing",150,150),
-      createAffix("flashHealing","baseHealing",120,120),
+      createAffix("flashHeal","baseHealing",120,120),
       createAffix("rejuvenate","cooldownRed",105,105),
       createAffix("talentExchange","priestToOccultist",1,2),
       createAffix("talentExchange","occultistToDruid",1,2),
@@ -270,11 +270,11 @@ var affixes = {
       createAffix("talent","randomOccultistTalent",4,4),
       createAffix("basic","mana",200,200),
       createAffix("basic","manaPercent",20,20),
-      createAffix("lesserHealing","baseHealing",200,200),
+      createAffix("lesserHeal","baseHealing",200,200),
       createAffix("renew","baseHealing",60,60),
       createAffix("dispel","additionalStatusRemove",5,5),
       createAffix("radiantHeal","baseHealing",250,250),
-      createAffix("flashHealing","baseHealing",200,200),
+      createAffix("flashHeal","baseHealing",200,200),
       createAffix("rejuvenate","cooldownRed",140,140),
       createAffix("talentExchange","priestToOccultist",2,2),
       createAffix("talentExchange","occultistToDruid",2,2),
@@ -528,6 +528,7 @@ function display(){
     }
   }
   tooltip.innerHTML = itemBaseInfoString+itemAffixString;
+  //console.log(this.name);
 }
 
 function isPercent(string){
@@ -665,14 +666,14 @@ function createItem(){
     talents : {
       druid : {naturesBlessing : 0,abundantGrowth : 0,conjuration : 0,harmony : 0,poison : 0,eclipse : 0,aspectOfTheTreeFolk : 0,regenAura : 0, all : 0},
       priest : {pathsEnd : 0,resilience : 0,pathOfLight : 0,desperatePrayer : 0,strengthen : 0,helpingHands : 0,lightsGuidance : 0,fortificationAura : 0, all : 0},
-      occultist : {darkMagic : 0,eradication : 0,demonKnowledge : 0,demonify : 0,soulBoost : 0,vampirism : 0,decayAur a : 0, all : 0},
+      occultist : {darkMagic : 0,eradication : 0,demonKnowledge : 0,demonify : 0,soulBoost : 0,vampirism : 0,decayAura : 0, all : 0},
     },
     skills : {
-      lesserHealing : {baseHealing : 0,baseHealingPercent : 0,healingPowerBonus : 0,manaCostReductionPercent : 0,cooldownReductionPercent : 0,castTimeReductionPercent : 0},
+      lesserHeal : {baseHealing : 0,baseHealingPercent : 0,healingPowerBonus : 0,manaCostReductionPercent : 0,cooldownReductionPercent : 0,castTimeReductionPercent : 0},
       renew : {baseHealing : 0,baseHealingPercent : 0,healingPowerBonus : 0,manaCostReductionPercent : 0,cooldownReductionPercent : 0,duration : 0,durationPercent : 0},
       dispel : {manaCostReductionPercent : 0, cooldownReductionPercent : 0,additionalStatusRemove : 0,castTimeReductionPercent : 0},
       radiantHeal : {baseHealing : 0,baseHealingPercent : 0,healingPowerBonus : 0,manaCostReductionPercent : 0,cooldownReductionPercent : 0,castTimeReductionPercent : 0},
-      flashHealing : {baseHealing : 0,baseHealingPercent : 0,healingPowerBonus : 0,manaCostReductionPercent : 0,cooldownReductionPercent : 0},
+      flashHeal : {baseHealing : 0,baseHealingPercent : 0,healingPowerBonus : 0,manaCostReductionPercent : 0,cooldownReductionPercent : 0},
       rejuvenate : {baseHealingPercent : 0,cooldownReductionPercent : 0,duration : 0,durationPercent : 0,cooldownRed : 0},
       all : {baseHealing : 0,baseHealingPercent : 0,healingPowerBonus : 0,manaCostReductionPercent : 0,cooldownReductionPercent : 0,castTimeReductionPercent : 0,duration : 0,durationPercent : 0}
     }//affix["name"] == "darkMagic"||affix["name"] == "eradication"||affix["name"] == "demonKnowledge"||affix["name"] == "demonify"||affix["name"] == "soulBoost"||affix["name"] == "vampirism"||affix["name"] == "decayAura"
@@ -725,7 +726,7 @@ function addAffix(item, affix){
     }
   }else if (affix["key"] == "allSkill") {
     item.skills["all"][affix["name"]] += roll;
-  }else if (affix["key"] == "lesserHealing"||affix["key"] == "renew"||affix["key"] == "dispel"||affix["key"] == "radiantHeal"||affix["key"] == "flashHealing"||affix["key"] == "rejuvenate") {
+  }else if (affix["key"] == "lesserHeal"||affix["key"] == "renew"||affix["key"] == "dispel"||affix["key"] == "radiantHeal"||affix["key"] == "flashHeal"||affix["key"] == "rejuvenate") {
     item.skills[affix["key"]][affix["name"]] += roll;
   }else if (affix["key"] == "talentExchange") {
     if(affix["name"] == "druidToPriest"){
