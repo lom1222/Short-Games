@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="basicStyle.css">
+  </head>
+  <body>
+    <button onclick="generateItem(1000)">Generate a lot(debug)</button>-->
+    <button onclick="generateItem(1)">Generate</button>
+    <form>
+      <input type="number" name="Item Level" value="100" id="itemLevel">
+    </form>
+    <div id="item">
+      <img src="pictures/orb.png" width="300" height="300" id="itemPicture">
+      <p class="tooltip" id="itemInfo">press generate please<br>change num in text box to change item level</p>
+      <p class="tooltip" id="modPool">
+        Some info:<br>
+        items: staff,orb,robe<br>
+        staffs give best damage<br>
+        robes give best defence<br>
+        orbs give best skill and talent buffs<br>
+        (orbs are kinda op)<br>
+        new affixes are available<br>
+        at levels 5,10,15,25,35,50<br>
+        items can have 1 extra affix/10 lvls<br>
+        max affixes is 8<br>
+        items have 1 extra min affix/30 lvls<br>
+        starting at lvl 20<br>
+        important levels: 50(best affixes)<br>
+        60 - chance of 8 affixes are available<br>
+        70 - min affixes rises to 4<br>
+        aka x3 chance of 8 affix<br></p>
+    </div>
+  </body>
+  <script type="text/javascript" src="lootSystem.js"></script>
+</html>
