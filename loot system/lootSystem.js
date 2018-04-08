@@ -664,8 +664,8 @@ function createItem(){
     },
     talents : {
       druid : {naturesBlessing : 0,abundantGrowth : 0,conjuration : 0,harmony : 0,poison : 0,eclipse : 0,aspectOfTheTreeFolk : 0,regenAura : 0, all : 0},
-      priest : {pathsEnd : 0,resilience : 0,pathOfLight : 0,desperatePrayer : 0,strengthen : 0,helpingHands : 0,lightsguidance : 0,fortificationAura : 0, all : 0},
-      occultist : {darkMagic : 0,eradication : 0,demonKnowledge : 0,demonify : 0,soulBoost : 0,vampirism : 0,decayAura : 0, all : 0},
+      priest : {pathsEnd : 0,resilience : 0,pathOfLight : 0,desperatePrayer : 0,strengthen : 0,helpingHands : 0,lightsGuidance : 0,fortificationAura : 0, all : 0},
+      occultist : {darkMagic : 0,eradication : 0,demonKnowledge : 0,demonify : 0,soulBoost : 0,vampirism : 0,decayAur a : 0, all : 0},
     },
     skills : {
       lesserHealing : {baseHealing : 0,baseHealingPercent : 0,healingPowerBonus : 0,manaCostReductionPercent : 0,cooldownReductionPercent : 0,castTimeReductionPercent : 0},
@@ -718,7 +718,7 @@ function addAffix(item, affix){
       item.talents.occultist["all"] += roll;
     }else if(affix["name"] == "naturesBlessing"||affix["name"] == "abundantGrowth"||affix["name"] == "conjuration"||affix["name"] == "harmony"||affix["name"] == "poison"||affix["name"] == "eclipse"||affix["name"] == "aspectOfTheTreeFolk"||affix["name"] == "regenAura"){
       item.talents.druid[affix["name"]] += roll;
-    }else if(affix["name"] == "pathsEnd"||affix["name"] == "resilience"||affix["name"] == "pathOfLight"||affix["name"] == "desperatePrayer"||affix["name"] == "strengthen"||affix["name"] == "helpingHands"||affix["name"] == "lightsguidance"||affix["name"] == "fortificationAura"){
+    }else if(affix["name"] == "pathsEnd"||affix["name"] == "resilience"||affix["name"] == "pathOfLight"||affix["name"] == "desperatePrayer"||affix["name"] == "strengthen"||affix["name"] == "helpingHands"||affix["name"] == "lightsGuidance"||affix["name"] == "fortificationAura"){
       item.talents.priest[affix["name"]] += roll;
     }else if(affix["name"] == "darkMagic"||affix["name"] == "eradication"||affix["name"] == "demonKnowledge"||affix["name"] == "demonify"||affix["name"] == "soulBoost"||affix["name"] == "vampirism"||affix["name"] == "decayAura"){
       item.talents.occultist[affix["name"]] += roll;
