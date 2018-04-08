@@ -485,7 +485,7 @@ function display(){
   var picture = document.getElementById("itemPicture");
   picture.src = "pictures/"+type+".png";
   var tooltip = document.getElementById("itemInfo");
-  var itemBaseInfoString = name + "<br>Item Level: " + itemLevel + "<br>Affixes: "+affixNum+"/"+minAffixNum+"-"+maxAffixNum;
+  var itemBaseInfoString = this.name + "<br>Item Level: " + itemLevel + "<br>Affixes: "+affixNum+"/"+minAffixNum+"-"+maxAffixNum;
   var item = completeItem;
   var itemAffixString = "";
   if(item.healingPower!=0){
