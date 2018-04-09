@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button onclick="calc()">calculate difficulty</button><br>
+    <p>Boss #: (1-sk,2-gump, etc.)</p>
+    <input type="number" id="bossNum" value="1"><br>
+    <p>Boss tier: (1-norm,2-brutal,3-insane)</p>
+    <input type="number" id="bossTier" value="1"><br>
+    <p id="bossDif">100%</p><br>
+    <p>difficulty of first 15 bosses in 5 tiers: </p>
+    <div id="chart">
+    </div>
+  </body>
+  <script type="text/javascript" src="difficulty.js"></script>
+</html>
