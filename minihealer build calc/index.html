@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Total Level: <span id="level">1</span></h1>
+    <div class="class" id="druid">
+      <div class="tier" id="druid1">
+        <div class="talent" id="naturesBlessing">Increase Renew's duration by 1/2/3 seconds</div>
+        <div class="talent" id="abundantGrowth">Renew's heal has a 15/30/45%<br>chance of restoring mana</div>
+        <div class="talent" id="conjuration">Increased Healpower by 15/30/45/60/75</div>
+      </div>
+      <div class="tier" id="druid2">
+        <div class="talent" id="harmony">Increase Renew's effect by 5/10/15%</div>
+        <div class="talent" id="poison">Increase Ranger's damage by 6/12/18%<br>Ranger's attacks have a 5% chance to poison enemy for 5 seconds<br>dealing 15/25/35(*10% Ranger's damage) per second</div>
+        <div class="talent" id="eclipse">Increase total Healpower by 2.5/5/7.5%</div>
+      </div>
+      <div class="tier" id="druid3">
+        <div class="talent" id=""></div>
+        <div class="talent" id="aspectOfTheTreefolk">Increase Tank's HP by 5/10/15%<br>Tank also gains 3/6/9% additional damage reduction</div>
+        <div class="talent" id="regenAura">All party members regenerate<br>2/4/6+(*1.5% Healpower)<br>HP per second</div>
+      </div>
+      <div class="tier" id="druid4">
+        <div class="talent" id="botanist">Increase Renew's effect by 1/2/3%<br>Renew now heals for 10/15/20%<br>of amount healed at the end of the duration</div>
+        <div class="talent" id="survivalInstincts">Increase Tank's HP by 85/170/235<br>Tank gains additional 15/20/25%<br>damage reduction when below 35% health</div>
+        <div class="talent" id="rapidShot">Increase Ranger's damage by 2/4/6%<br>Ranger will occasionally cast Rapid Shot<br>Rapid Shot deals damage equal to 20/30/40% of Ranger's damage<br>Rapid Shot fires 6 arrows and has increased crit chance</div>
+      </div>
+      <div class="tier" id="druid5">
+        <div class="talent" id="newSpring">Increase Rejuvenate's mana gain by 2/4/6<br>Rejuvenate now heals for 0.7/1.4/2.1%<br>of their maximum health for all party member per tick</div>
+        <div class="talent" id=""></div>
+        <div class="talent" id="blessingOfTheForest">Increase HealPower by 80/160/240<br>Every 6 seconds all party members are healed for<br>2/4/6% of their maximum health</div>
+      </div>
+    </div>
+    <div class="class" id="priest">
+      <div class="tier" id="priest1">
+        <div class="talent" id="pathsEnd">During Spirit Form (Healer HP is 0),<br>healing done is increased by 20/30/40%<br></div>
+        <div class="talent" id="resilience">Increase all party members' HP<br>Tank by 40/80/120/160<br>Berzerker by 35/70/105/140<br>Ranger by 25/50/75/100<br>Healer by 30/60/90/120</div>
+        <div class="talent" id="pathOfLight">Incease Lesser Healing's effect<br>by 10/20/30%</div>
+      </div>
+      <div class="tier" id="priest2">
+        <div class="talent" id="desperatePrayer">Your healing on target with less than 30% life<br>is increased by 10/20/30%</div>
+        <div class="talent" id="strengthen">Increase all party members' HP<br>by 3/6/9%</div>
+        <div class="talent" id="helpingHands">Your Lesser Heal also heal 1 extra wounded target<br>for 25/35/45% healing done to the main target</div>
+      </div>
+      <div class="tier" id="priest3">
+        <div class="talent" id="lightsGuidance">Incease Lesser/Radiant/Flash Heal effect<br>by 5/10/15%<br>Your Lesser/Radiant/Flash Heal also<br>reduces target's damage taken<br>by 5/7/9% for 5 seconds</div>
+        <div class="talent" id="fortificationAura">Gain an aura that reduces<br>all damage taken by 2/4/6%</div>
+        <div class="talent" id=""></div>
+      </div>
+      <div class="tier" id="priest4">
+        <div class="talent" id="heroism">Increase Tank's health by 50/100/150<br>Redirect 5/10/15% damage taken by<br>all party memebers to Tank</div>
+        <div class="talent" id="devotion">Incease HealPower by 25/50/75<br>Incease Lesser Heal's effect by 7/14/21%<br>Your Lesser Heal has a 8/11/14% chance<br>to refresh target's Renew duration</div>
+        <div class="talent" id="leadership">Increase Tank's health and damage by 2/4/6%<br>Increase Tank's block chance by 1/2/3%<br>Tank will occasionally cast Inspire<br>Inspire regenerates 20/40/60 hp per seconds and increase<br>damage dealt by 2/3/4% for all party members<br>Lasts 3 seconds</div>
+      </div>
+      <div class="tier" id="priest5">
+        <div class="talent" id="timeInNeed">Every 6 seconds Tank is healed for<br>5/10/15% of his maximum health</div>
+        <div class="talent" id=""></div>
+        <div class="talent" id="divineAegis">Increase Tank's block chance by 2/4/6%<br>Tank is healed for 1/2/3% of his maximum health on block</div>
+      </div>
+    </div>
+    <div class="class" id="occultist">
+      <div class="tier" id="occultist1">
+        <div class="talent" id="darkMagic">Increase all party members' damage<br>Tank by 4/8/12/16<br>Berzerker by 9/18/27/36<br>Ranger by 3/6/9/12<br>Healer by 2/4/6/8</div>
+        <div class="talent" id="eradication">Target takes 1/2/3/4% more damage<br>for each 20% life missing</div>
+        <div class="talent" id=""></div>
+      </div>
+      <div class="tier" id="occultist2">
+        <div class="talent" id="demonKnowledge">Increase all party members' damage<br>by 4/8/12%</div>
+        <div class="talent" id="demonify">Dead characters can still attack with<br>20/30/40% damage</div>
+        <div class="talent" id="soulBoost">Your Lesser/Radiant/Flash Heal also<br>increases taget's damage<br>by 7/14/21% for 3 seconds</div>
+      </div>
+      <div class="tier" id="occultist3">
+        <div class="talent" id="vampirism">Increase all party members' damage by 1.5/3/4.5%<br>All characters' attack restores HP equal to<br>4/5/6% damage dealt</div>
+        <div class="talent" id="decayAura">All enemies lose<br>35/70/105+(*3% Healpower)HP per second<br></div>
+        <div class="talent" id=""></div>
+      </div>
+      <div class="tier" id="occultist4">
+        <div class="talent" id="deception">Increase all party members' health by 4/8/12%<br>Increase all party members' dodge chance by 1.5/3/4.5%</div>
+        <div class="talent" id="chaosStrike">Increase Berzerker's damage by 3/6/9%<br>Increase Berzerker's crit damage by 5/10/15%<br>Berzerker will occasionally cast Chaos Strike<br>Chaos Strike deals 105/110/115% of Berzerker's damage<br>Chaos Strike is guarenteed to crit</div>
+        <div class="talent" id="obliterate">Increase all party members' damage by 2/4/6%<br>Increase all party members' attack speed by 1.5/3/4.5%<br>Increase all party members' crit chance by 1/2/3%<br>Increase all party members' crit damage by 5/10/15%</div>
+      </div>
+      <div class="tier" id="occultist5">
+        <div class="talent" id="manaShield">Increase maximum mana by 200/400/600<br>15/30/45% of damage taken by Healer<br>is taken from mana instead</div>
+        <div class="talent" id=""></div>
+        <div class="talent" id="voodooMagic">Increase all party members' health by 2/4/6%<br>Whenever a party member receives fatal blow<br>for the first time in a fight<br>He/She is healed for 25/45/65% of his/her maximum health instead</div>
+      </div>
+    </div>
+    <div id="extra">
+      <button id="export" onclick="exportBuild()">Export</button>
+      <input type="text" id="buildCode" value="code"></input>
+      <button id="import" onclick="importBuild()">Import</button>
+      <button id="reset" onclick="reset()">Reset</button>
+    </div>
+  </body>
+  <script type="text/javascript"src="buildCalc.js"></script>
+</html>

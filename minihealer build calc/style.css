@@ -1,0 +1,96 @@
+body{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.class{
+  /*border: 2px solid red;
+  border-radius: 10px;*/
+  display: inline-block;
+}
+#extra{
+  margin-top: 25px;
+}
+#druid{
+  border: 2px solid green;
+  border-radius: 10px;
+}
+#priest{
+  border: 2px solid gold;
+  border-radius: 10px;
+}
+#occultist{
+  border: 2px solid purple;
+  border-radius: 10px;
+}
+.tier{
+  /*border: 2px solid green;
+  border-radius: 8px;*/
+  display: block;
+}
+.talent{
+  border: 4px solid gray;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 10px;
+  padding: 0;
+  height: 50px;
+}
+img{
+  margin: 0;
+  margin-right: -25px;
+}
+.levelIndicator{
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  position: relative;
+  bottom: 4px;
+  font-size: 23px;
+  font-weight: bold;
+}
+.buttonDiv{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position:relative;
+  top: -7px;
+}
+.plusButton , .minusButton{
+  width: 25px;
+  height: 25px;
+  background-color: gray;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  display: block;
+  border: 1px solid black;
+}
+.plusButton{
+  border-bottom: 0px;
+}
+.tooltip{
+  visibility: hidden;
+  background-color: white;
+  position: absolute;
+  opacity: 0.85;
+  z-index: 1;
+  margin-top: 50px;
+  margin-left: -100px;
+  padding: 0;
+  color: black;
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid black;
+}
+.talent:hover .tooltip{
+  visibility: visible;
+}
