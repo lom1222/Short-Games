@@ -87,9 +87,13 @@ function addTalentLevel(key){
   let levelIndicator = talent.getElementsByClassName("levelIndicator")[0];
   levelIndicator.innerHTML = (parseInt(levelIndicator.innerHTML)+1)+"";
   if(parseInt(levelIndicator.innerHTML)>0){
-    talent.style.borderColor = "green";
+    talent.style.borderColor = "red";
+    talent.style.borderWidth = "6px";
+    talent.style.margin = "10px";
   }else{
     talent.style.borderColor = "gray";
+    talent.style.borderWidth = "3px";
+    talent.style.margin = "13px";
   }
   document.getElementById("level").innerHTML = parseInt(document.getElementById("level").innerHTML)+1;
 }
@@ -102,10 +106,14 @@ function subtractTalentLevel(key){
   if(parseInt(levelIndicator.innerHTML)<0){
     levelIndicator.innerHTML = "0";
   }else if(parseInt(levelIndicator.innerHTML)>0){
-    talent.style.borderColor = "green";
+    talent.style.borderColor = "red";
+    talent.style.borderWidth = "6px";
+    talent.style.margin = "10px";
     document.getElementById("level").innerHTML = parseInt(document.getElementById("level").innerHTML)-1;
   }else{
     talent.style.borderColor = "gray";
+    talent.style.borderWidth = "3px";
+    talent.style.margin = "13px";
     document.getElementById("level").innerHTML = parseInt(document.getElementById("level").innerHTML)-1;
   }
 }
@@ -130,6 +138,8 @@ function reset(){
   for(let x = 0;x<talents.length;x++){
     talents[x].getElementsByClassName("levelIndicator")[0].innerHTML="0";
     talents[x].style.borderColor = "gray";
+    talents[x].style.borderWidth = "3px";
+    talents[x].style.margin = "13px";
   }
   document.getElementById("level").innerHTML = "1";
 }
