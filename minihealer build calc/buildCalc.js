@@ -50,11 +50,30 @@ function addTooltips(){
   for(let x = 0;x<talents.length;x++){
     let tooltip = document.createElement("p");
     tooltip.className = "tooltip";
-    tooltip.innerHTML = talents[x].innerHTML;
+    tooltip.innerHTML = toRegStr(talents[x].id)+"<br>"+talents[x].innerHTML;
     talents[x].innerHTML = "";
     talents[x].appendChild(tooltip);
   }
   console.log("got tooltips");
+}
+
+function toRegStr(str){
+  var string = str;
+  string = (string.charCodeAt(0)>90)?(String.fromCharCode(string.charCodeAt(0)-32)+string.substring(1)):string;
+  var returnString = "";
+  var lastCapital = 0;
+  for(var x = 0;x<string.length;x++){
+    if(string.charCodeAt(x)<91){
+      returnString+=string.substring(lastCapital,x)+" ";
+      lastCapital = x;
+      //console.log("yup "+string);
+    }
+  }
+  if(string.substring(lastCapital)!="Percent"){
+    returnString+=string.substring(lastCapital);
+  }
+  //console.log(returnString);
+  return returnString;
 }
 
 function addButtons(){
