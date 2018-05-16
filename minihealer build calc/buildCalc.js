@@ -105,16 +105,8 @@ function addTalentLevel(key){
   }
   let levelIndicator = talent.getElementsByClassName("levelIndicator")[0];
   levelIndicator.innerHTML = (parseInt(levelIndicator.innerHTML)+1)+"";
-  if(parseInt(levelIndicator.innerHTML)>0){
-    talent.style.borderColor = "red";
-    talent.style.borderWidth = "6px";
-    talent.style.margin = "10px";
-  }else{
-    talent.style.borderColor = "gray";
-    talent.style.borderWidth = "3px";
-    talent.style.margin = "13px";
-  }
   document.getElementById("level").innerHTML = parseInt(document.getElementById("level").innerHTML)+1;
+  resetBorders();
 }
 
 function subtractTalentLevel(key){
@@ -125,16 +117,11 @@ function subtractTalentLevel(key){
   if(parseInt(levelIndicator.innerHTML)<0){
     levelIndicator.innerHTML = "0";
   }else if(parseInt(levelIndicator.innerHTML)>0){
-    talent.style.borderColor = "red";
-    talent.style.borderWidth = "6px";
-    talent.style.margin = "10px";
     document.getElementById("level").innerHTML = parseInt(document.getElementById("level").innerHTML)-1;
   }else{
-    talent.style.borderColor = "gray";
-    talent.style.borderWidth = "3px";
-    talent.style.margin = "13px";
     document.getElementById("level").innerHTML = parseInt(document.getElementById("level").innerHTML)-1;
   }
+  resetBorders();
 }
 
 function importBuild(){
@@ -151,15 +138,37 @@ function importBuild(){
   //var temp = JSON.parse(atob(localStorage.entropySave));
 }
 
+function resetBorders(){
+  let talents = document.getElementsByClassName("talent");
+  console.log("run");
+  for(let x = 0;x<talents.length;x++){
+    let talent = talents[x];
+    let levelIndicator = talent.getElementsByClassName("levelIndicator")[0];
+    if(parseInt(levelIndicator.innerHTML)<0){
+      levelIndicator.innerHTML = "0";
+    }else if(parseInt(levelIndicator.innerHTML)>0){
+      talent.style.borderColor = "red";
+      talent.style.borderWidth = "4px";
+      talent.style.margin = "1px";
+      talent.style.marginTop = "13px";
+      talent.style.marginBottom = "13px";
+    }else{
+      talent.style.borderColor = "gray";
+      talent.style.borderWidth = "2px";
+      talent.style.margin = "3px";
+      talent.style.marginTop = "15px";
+      talent.style.marginBottom = "15px";
+    }
+  }
+}
+
 function reset(){
   console.log("reset");
   let talents = document.getElementsByClassName("talent");
   for(let x = 0;x<talents.length;x++){
     talents[x].getElementsByClassName("levelIndicator")[0].innerHTML="0";
-    talents[x].style.borderColor = "gray";
-    talents[x].style.borderWidth = "3px";
-    talents[x].style.margin = "13px";
   }
+  resetBorders();
   document.getElementById("level").innerHTML = "1";
 }
 
