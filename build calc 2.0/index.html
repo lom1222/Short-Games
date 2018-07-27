@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="body" oncontextmenu="return false;">
+    <h1>Total Level: <span id="level">1</span></h1>
+    <h2>Essence Level: <span id="essenceLevel">NOT IMPLEMENTED YET</span></h2>
+    <div id="holder"></div>
+    <div id="extra">
+      <button id="export" onclick="exportBuild()">Export</button>
+      <input type="text" id="buildCode" value="code"></input>
+      <button id="import" onclick="importBuild()">Import</button><br>
+      <button id="reset" onclick="reset()">Reset</button>
+      <button id="toggleUnused" onclick="toggleUnusedTalents()">Show/Hide unused talents</button>
+    </div>
+  </body>
+  <script type="text/javascript"src="buildCalc2.js"></script>
+</html>
