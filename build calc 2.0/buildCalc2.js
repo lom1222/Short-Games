@@ -410,7 +410,7 @@ function exportBuild(){
         break;
       }
     }
-    shortenedString = shortenedString.substring(0,start) + "~" + ((end-start)>9?(end-start):("0"+(end-start))) + "" + (end+1!=shortenedString.length?shortenedString.substring(end+1):"");
+    shortenedString = shortenedString.substring(0,start) + "~" + ((end-start)>9?(end-start):("0"+(end-start))) + "" + (end+1!=shortenedString.length?shortenedString.substring(end):"");
     itteration++;
   }
   document.getElementById("buildCode").value = shortenedString;
@@ -440,12 +440,15 @@ function importBuild(){
   reset();
   let code = document.getElementById("buildCode").value;
   let lengthenedString = code;
-  while(lengthenedString.indexOf("~")!=-1){
+  while(true){
+    if(lengthenedString.indexOf("~")==-1){
+      break;
+    }
     let index = lengthenedString.indexOf("~");
     let zeroes = (lengthenedString.length>=index+3)?lengthenedString.substring(index+1,index+3):lengthenedString.substring(index+1);
     zeroes = parseInt(zeroes);
+    let stringEnd = (lengthenedString.length>index+2)?lengthenedString.substring(index+3):"";
     lengthenedString = lengthenedString.substring(0,index);
-    let stringEnd = (lengthenedString.length>=index+3)?lengthenedString.substring(index+3):"";
     for(let x = 0;x < zeroes;x++){
       lengthenedString+="0";
     }
