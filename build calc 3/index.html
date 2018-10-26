@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="body" oncontextmenu="return false;">
+    <h1>Total Level: <span id="level">1</span></h1>
+    <h2>Essence Level: <span id="essenceLevel">NOT IMPLEMENTED YET</span></h2>
+    <div id="holder"></div>
+    <div id="extra">
+      <input type="text" id="buildCode" value="code"></input>
+      <button id="export" onclick="exportBuild()">Export</button>
+      <button id="import" onclick="importBuild()">Import</button>
+      <button id="reset" onclick="reset()">Reset</button><br>
+      <button id="toggleUnused" onclick="toggleUnusedTalents()">Show/Hide unused talents</button>
+      <button id="toggleBackground" onclick="toggleBackground()">Show/Hide background</button><br>
+      <input type="text" id="tagToSearch" value="tag"></input>
+      <button id="search" onclick="searchTags()">Search Tags</button>
+      <input type="checkbox" id="showOnlySearch" checked>Hide Other<br>
+    </div>
+  </body>
+  <script type="text/javascript"src="buildCalc3.js"></script>
+</html>
